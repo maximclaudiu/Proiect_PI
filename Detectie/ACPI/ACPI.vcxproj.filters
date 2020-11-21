@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="student">
+      <UniqueIdentifier>{a9fcbf50-c9a1-47eb-be3f-8d483edfb463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ImageGrid.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageGridCell.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageViewer.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>student</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="HistogramViewer.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractViewer.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ImageGrid.h">
+      <Filter>core</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ImageGridCell.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageViewer.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="PITimer.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="operatii.h">
+      <Filter>student</Filter>
+    </ClInclude>
+    <ClInclude Include="HistogramViewer.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractViewer.h">
+      <Filter>core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

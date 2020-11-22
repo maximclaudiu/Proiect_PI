@@ -138,11 +138,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AbstractViewer.cpp" />
+    <ClCompile Include="Functii.cpp" />
     <ClCompile Include="HistogramViewer.cpp" />
     <ClCompile Include="ImageGrid.cpp" />
     <ClCompile Include="ImageGridCell.cpp" />
     <ClCompile Include="ImageViewer.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PlateDetection.cpp" />
     <ClCompile Include="Tools.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -178,7 +179,7 @@
     <ClInclude Include="HistogramViewer.h" />
     <ClInclude Include="ImageGridCell.h" />
     <ClInclude Include="ImageViewer.h" />
-    <ClInclude Include="operatii.h" />
+    <ClInclude Include="PlateDetection.h" />
     <ClInclude Include="PITimer.h" />
     <ClInclude Include="Tools.h" />
   </ItemGroup>

@@ -19,9 +19,6 @@
     <ClCompile Include="ImageViewer.cpp">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>student</Filter>
-    </ClCompile>
     <ClCompile Include="Tools.cpp">
       <Filter>core</Filter>
     </ClCompile>
@@ -30,6 +27,12 @@
     </ClCompile>
     <ClCompile Include="AbstractViewer.cpp">
       <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="Functii.cpp">
+      <Filter>student</Filter>
+    </ClCompile>
+    <ClCompile Include="PlateDetection.cpp">
+      <Filter>student</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -50,14 +53,14 @@
     <ClInclude Include="PITimer.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="operatii.h">
-      <Filter>student</Filter>
-    </ClInclude>
     <ClInclude Include="HistogramViewer.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="AbstractViewer.h">
       <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="PlateDetection.h">
+      <Filter>student</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

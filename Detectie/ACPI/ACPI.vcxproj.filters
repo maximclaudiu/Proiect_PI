@@ -8,6 +8,16 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;cxx;c;def</Extensions>
     </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ImageGrid.cpp">
@@ -28,16 +38,28 @@
     <ClCompile Include="AbstractViewer.cpp">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="Functii.cpp">
+    <ClCompile Include="PlateDetection.cpp">
       <Filter>student</Filter>
     </ClCompile>
-    <ClCompile Include="PlateDetection.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainWindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainWindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainWindow.cpp">
       <Filter>student</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ImageGrid.h">
       <Filter>core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainWindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainWindow.h">
+      <Filter>student</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -59,8 +81,8 @@
     <ClInclude Include="AbstractViewer.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="PlateDetection.h">
-      <Filter>student</Filter>
+    <ClInclude Include="GeneratedFiles\ui_MainWindow.h">
+      <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFrame>
-#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
@@ -25,41 +24,38 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QGraphicsView *graphicsView;
-    QPushButton *pushButton;
+    QPushButton *LoadImage;
     QFrame *line;
     QFrame *line_2;
     QLabel *label;
     QLabel *label_2;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QGraphicsView *graphicsView_2;
+    QPushButton *ApplyFilter;
+    QPushButton *SaveImage;
+    QLabel *Poza_OG;
+    QLabel *Poza_FILT;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1030, 505);
-        MainWindow->setMinimumSize(QSize(1030, 505));
-        MainWindow->setMaximumSize(QSize(1030, 505));
+        MainWindow->resize(1020, 440);
+        MainWindow->setMinimumSize(QSize(1020, 440));
+        MainWindow->setMaximumSize(QSize(1020, 440));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        graphicsView = new QGraphicsView(centralwidget);
-        graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(15, 41, 480, 380));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(20, 450, 101, 31));
+        LoadImage = new QPushButton(centralwidget);
+        LoadImage->setObjectName(QString::fromUtf8("LoadImage"));
+        LoadImage->setGeometry(QRect(20, 390, 101, 31));
         line = new QFrame(centralwidget);
         line->setObjectName(QString::fromUtf8("line"));
-        line->setGeometry(QRect(0, 430, 1021, 4));
+        line->setGeometry(QRect(0, 370, 1021, 4));
         line->setFrameShadow(QFrame::Plain);
         line->setLineWidth(3);
         line->setFrameShape(QFrame::HLine);
         line_2 = new QFrame(centralwidget);
         line_2->setObjectName(QString::fromUtf8("line_2"));
-        line_2->setGeometry(QRect(490, -30, 41, 461));
+        line_2->setGeometry(QRect(490, -90, 41, 461));
         line_2->setFrameShadow(QFrame::Plain);
         line_2->setLineWidth(3);
         line_2->setFrameShape(QFrame::VLine);
@@ -69,15 +65,23 @@ public:
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(720, 10, 71, 20));
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(460, 450, 101, 31));
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(890, 450, 101, 31));
-        graphicsView_2 = new QGraphicsView(centralwidget);
-        graphicsView_2->setObjectName(QString::fromUtf8("graphicsView_2"));
-        graphicsView_2->setGeometry(QRect(530, 40, 480, 380));
+        ApplyFilter = new QPushButton(centralwidget);
+        ApplyFilter->setObjectName(QString::fromUtf8("ApplyFilter"));
+        ApplyFilter->setGeometry(QRect(460, 390, 101, 31));
+        SaveImage = new QPushButton(centralwidget);
+        SaveImage->setObjectName(QString::fromUtf8("SaveImage"));
+        SaveImage->setGeometry(QRect(890, 390, 101, 31));
+        Poza_OG = new QLabel(centralwidget);
+        Poza_OG->setObjectName(QString::fromUtf8("Poza_OG"));
+        Poza_OG->setGeometry(QRect(10, 40, 480, 320));
+        Poza_OG->setMinimumSize(QSize(480, 320));
+        Poza_OG->setMaximumSize(QSize(480, 320));
+        Poza_OG->setScaledContents(true);
+        Poza_FILT = new QLabel(centralwidget);
+        Poza_FILT->setObjectName(QString::fromUtf8("Poza_FILT"));
+        Poza_FILT->setGeometry(QRect(530, 40, 480, 320));
+        Poza_FILT->setMinimumSize(QSize(480, 320));
+        Poza_FILT->setScaledContents(true);
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -91,11 +95,13 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Incarca Imagine", nullptr));
+        LoadImage->setText(QCoreApplication::translate("MainWindow", "Incarca Imagine", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Imaginea initiala", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Imaginea filtrata", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Aplica filtru", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Salvare Imagine", nullptr));
+        ApplyFilter->setText(QCoreApplication::translate("MainWindow", "Aplica filtru", nullptr));
+        SaveImage->setText(QCoreApplication::translate("MainWindow", "Salvare Imagine", nullptr));
+        Poza_OG->setText(QString());
+        Poza_FILT->setText(QString());
     } // retranslateUi
 
 };

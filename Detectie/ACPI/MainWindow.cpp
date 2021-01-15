@@ -5,7 +5,6 @@ using namespace cv;
 using namespace std;
 Mat src, src_gray;
 int thresh_int = 100;
-RNG rng(12345);
 Mat img, eqh, sobel, sobeleqh, gaussian, morph;
 QString fileName;
 
@@ -20,6 +19,7 @@ MainWindow::MainWindow() : QMainWindow(), ui(new Ui::MainWindow) {
 void thresh_callback(int, void*)
 {
     Mat canny_output, canny_input;
+    Scalar color = Scalar(0, 0, 0);
     GaussianBlur(src_gray, src_gray, Size(3, 3), 0, 1);
     Canny(src_gray, canny_output, 0, 255, 3, true);
     vector<vector<Point> > contours;
@@ -28,6 +28,8 @@ void thresh_callback(int, void*)
     vector<Rect> boundRect(contours.size());
     vector<Point2f>centers(contours.size());
     vector<float>radius(contours.size());
+
+
     for (size_t i = 0; i < contours.size(); i++)
     {
         double p;
@@ -43,12 +45,10 @@ void thresh_callback(int, void*)
     Mat drawing = Mat::zeros(canny_output.size(), CV_8UC3);
     for (size_t i = 0; i < contours.size(); i++)
     {
-        if (boundRect[i].area() > 750 && boundRect[i].area() < 3000)
-            if ((float)boundRect[i].width / boundRect[i].height >= 2 && (float)boundRect[i].width / boundRect[i].height <= 6)
-                // if (boundRect[i].height>30 && boundRect[i].height<100)
+        if (boundRect[i].area() > 1500 && boundRect[i].area() < 3000)
+            if ((float)boundRect[i].width / boundRect[i].height >= 2.6 && (float)boundRect[i].width / boundRect[i].height <= 5)
             {
-                Scalar color = Scalar(rng.uniform(0, 256), rng.uniform(0, 256), rng.uniform(0, 256));
-                rectangle(src, boundRect[i].tl(), boundRect[i].br(), color, 3);
+                rectangle(src, boundRect[i].tl(), boundRect[i].br(), color, FILLED);
             }
     }
 }
@@ -62,6 +62,7 @@ void MainWindow::addImage() {
     if (src.empty()) {
         cout << "Could not open or find the image!\n" << endl;       
     }
+    cv::resize(src, src, Size(480, 320));
     cvtColor(src, src_gray, COLOR_BGR2GRAY);
     const int max_thresh = 255;
     QImage img;
